@@ -18,5 +18,7 @@ spring:
 
 logging:
   level:
+    root: INFO
+    p6spy: DEBUG
     org.hibernate.SQL: OFF
-    org.hibernate.orm.jdbc.bind: OFF
+    org.hibernate.type.descriptor.sql.BasicBinder: OFF
