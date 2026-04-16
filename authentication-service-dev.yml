@@ -2,6 +2,20 @@ server:
   port: 8084
 
 spring:
+  application:
+    name: pseudocode-battle-service
+
+  profiles:
+    active: dev
+
+  config:
+    import: optional:configserver:http://localhost:8888
+
+  cloud:
+    config:
+      uri: http://localhost:8888
+      fail-fast: true
+
   datasource:
     url: jdbc:p6spy:mysql://localhost:3306/pseudocode_db
     username: root
@@ -14,11 +28,24 @@ spring:
     show-sql: false
     properties:
       hibernate:
-        format_sql: true
+        format_sql: false
 
 logging:
+  file:
+    name: logs/application.log
+
   level:
     root: INFO
+    com.codetikki: DEBUG
+
+    # ONLY SQL logs from P6Spy
     p6spy: DEBUG
+
+    # Disable Hibernate SQL logs completely
     org.hibernate.SQL: OFF
     org.hibernate.type.descriptor.sql.BasicBinder: OFF
+
+decorator:
+  datasource:
+    p6spy:
+      enable-logging: true
