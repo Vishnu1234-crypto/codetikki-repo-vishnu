@@ -34,18 +34,19 @@ logging:
   file:
     name: logs/application.log
 
+  pattern:
+    file: "%d{yyyy-MM-dd HH:mm:ss} %-5level [%X{requestId}] %logger - %msg%n"
+
   level:
     root: INFO
     com.codetikki: DEBUG
 
-    # ONLY SQL logs from P6Spy
-    p6spy: DEBUG
+ 
+    p6spy: INFO
 
-    # Disable Hibernate SQL logs completely
+   
     org.hibernate.SQL: OFF
-    org.hibernate.type.descriptor.sql.BasicBinder: OFF
-
-decorator:
-  datasource:
-    p6spy:
-      enable-logging: true
+    org.hibernate.orm.jdbc.bind: OFF
+    org.hibernate.type: OFF
+    org.hibernate.type.descriptor.sql: OFF
+    org.hibernate.stat: OFF
