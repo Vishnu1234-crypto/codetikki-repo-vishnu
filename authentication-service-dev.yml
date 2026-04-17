@@ -34,12 +34,27 @@ logging:
   file:
     name: logs/application.log
 
+  logback:
+    rollingpolicy:
+      max-file-size: 10MB
+      max-history: 7
+
   pattern:
     file: "%d{yyyy-MM-dd HH:mm:ss} %-5level [%X{requestId}] %logger - %msg%n"
 
   level:
     root: INFO
     com.codetikki: DEBUG
+
+   
+    p6spy: INFO
+
+    # FULL Hibernate shutdown
+    org.hibernate.SQL: OFF
+    org.hibernate.orm.jdbc.bind: OFF
+    org.hibernate.type: OFF
+    org.hibernate.type.descriptor.sql: OFF
+    org.hibernate.stat: OFF
 
  
     p6spy: INFO
