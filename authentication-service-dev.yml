@@ -26,6 +26,7 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: false
+    open-in-view: false   
     properties:
       hibernate:
         format_sql: false
@@ -40,14 +41,19 @@ logging:
       max-history: 7
 
   pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} %-5level [%X{requestId}] %logger - %msg%n"
     file: "%d{yyyy-MM-dd HH:mm:ss} %-5level [%X{requestId}] %logger - %msg%n"
 
   level:
     root: INFO
     com.codetikki: DEBUG
 
-  
+ 
     p6spy: INFO
 
- 
+  
     org.hibernate: ERROR
+ 
+    org.hibernate.SQL: ERROR
+    org.hibernate.type: ERROR
+    org.hibernate.orm.jdbc.bind: ERROR
