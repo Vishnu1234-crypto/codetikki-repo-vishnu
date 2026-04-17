@@ -46,22 +46,8 @@ logging:
     root: INFO
     com.codetikki: DEBUG
 
-   
+  
     p6spy: INFO
-
-    # FULL Hibernate shutdown
-    org.hibernate.SQL: OFF
-    org.hibernate.orm.jdbc.bind: OFF
-    org.hibernate.type: OFF
-    org.hibernate.type.descriptor.sql: OFF
-    org.hibernate.stat: OFF
 
  
-    p6spy: INFO
-
-   
-    org.hibernate.SQL: OFF
-    org.hibernate.orm.jdbc.bind: OFF
-    org.hibernate.type: OFF
-    org.hibernate.type.descriptor.sql: OFF
-    org.hibernate.stat: OFF
+    org.hibernate: ERROR
