@@ -23,6 +23,8 @@ logging:
     org.hibernate.SQL: DEBUG
     org.hibernate.orm.jdbc.bind: TRACE
     org.hibernate.type.descriptor.sql: TRACE
- security:
+
+#  
+security:
   internal-key: my-secret-key
   jwt-secret: my-very-secure-secret-key-123456
