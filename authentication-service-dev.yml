@@ -31,7 +31,6 @@ spring:
       hibernate:
         format_sql: false
 
- 
 debug: false
 
 logging:
@@ -50,13 +49,13 @@ logging:
   level:
     root: INFO
     com.codetikki: DEBUG
- 
     p6spy: INFO
-
-  
     org.hibernate: ERROR
     org.hibernate.SQL: ERROR
     org.hibernate.type: ERROR
     org.hibernate.orm.jdbc.bind: ERROR
-  
     org.hibernate.type.descriptor.sql: ERROR
+
+jwt:
+  secret: my-super-secret-key-which-is-long-and-secure-at-least-32-bytes
+  expiration: 3600000
