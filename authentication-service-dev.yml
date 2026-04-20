@@ -56,6 +56,7 @@ logging:
     org.hibernate.orm.jdbc.bind: ERROR
     org.hibernate.type.descriptor.sql: ERROR
 
-jwt:
-  secret: my-super-secret-key-which-is-long-and-secure-at-least-32-bytes
-  expiration: 3600000
+security:
+  internal-key: my-secret-key
+  jwt-secret: my-super-secret-key-which-is-long-and-secure-at-least-32-bytes
+  jwt-expiration: 3600000
