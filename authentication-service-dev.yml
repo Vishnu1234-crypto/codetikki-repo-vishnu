@@ -1,9 +1,9 @@
 server:
-  port: 8091   
+  port: 8091
 
 spring:
   application:
-    name: authentication-service   
+    name: authentication-service
 
   datasource:
     url: jdbc:mysql://localhost:3306/pseudocode_db
@@ -24,6 +24,15 @@ logging:
   level:
     root: INFO
     com.codetikki: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,env
+  endpoint:
+    health:
+      show-details: always
 
 security:
   internal-key: my-secret-key
