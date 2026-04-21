@@ -1,7 +1,10 @@
 server:
-  port: 8085
+  port: 8084   
 
 spring:
+  application:
+    name: pseudocode-battle-service
+
   datasource:
     url: jdbc:mysql://localhost:3306/pseudocode_db
     username: root
@@ -11,7 +14,7 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-    show-sql: false   
+    show-sql: false
     properties:
       hibernate:
         format_sql: true
@@ -22,9 +25,7 @@ logging:
   level:
     org.hibernate.SQL: DEBUG
     org.hibernate.orm.jdbc.bind: TRACE
-    org.hibernate.type.descriptor.sql: TRACE
 
-#  
 security:
   internal-key: my-secret-key
   jwt-secret: my-very-secure-secret-key-123456
