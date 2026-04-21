@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: pseudocode-battle-service
+    name: authentication-service
 
   profiles:
     active: dev
