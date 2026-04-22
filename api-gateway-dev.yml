@@ -1,0 +1,3 @@
+security:
+  jwt-secret: my-super-secret-key-which-is-long-and-secure-at-least-32-bytes
+  internal-key: my-secret-key
