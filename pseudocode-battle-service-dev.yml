@@ -27,5 +27,5 @@ logging:
     org.hibernate.orm.jdbc.bind: TRACE
 
 security:
-  internal-key: my-secret-123
+  internal-key: my-secret-key
   jwt-secret: my-very-secure-secret-key-123456
