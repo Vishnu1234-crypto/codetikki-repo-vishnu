@@ -1,0 +1,11 @@
+spring:
+  profiles:
+    active: git
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Vishnu1234-crypto/codetikki-repo-vishnu
+          default-label: main
+      
